@@ -1,0 +1,26 @@
+{
+  "name": "w-web-090-lil-1-1-academie-lucas.pesse",
+  "version": "1.0.0",
+  "description": "[Projet Twitter WAC-1-2023]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechWebAcademiePromo2024/W-WEB-090-LIL-1-1-academie-lucas.pesse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechWebAcademiePromo2024/W-WEB-090-LIL-1-1-academie-lucas.pesse/issues"
+  },
+  "homepage": "https://github.com/EpitechWebAcademiePromo2024/W-WEB-090-LIL-1-1-academie-lucas.pesse#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "typewriter-effect": "^2.19.0"
+  }
+}

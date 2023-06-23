@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../output/connexion.css"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <title>Cuiitter | S'inscrire</title>
+</head>
+
+  <!--Subscription page to "Cuiiter"-->
+
+<script>
+  window.onload = function(){
+    document.getElementById("subscribe").onclick = function(event){
+      const span_verif = document.querySelector("span")
+      var pseudo = document.getElementById("pseudo").value;
+      const pseudo_input = document.getElementById("pseudo");
+      var email = document.getElementById("email").value;
+      const email_input = document.getElementById("email");
+      var password = document.getElementById("password").value;
+      const password_input = document.getElementById("password");
+      let span = document.createElement("span");
+      let textNode = document.createTextNode("Merci de bien vouloir rentrer des valeurs !");
+      span.style.color = "red";
+      
+      if(span_verif){
+        span_verif.remove();
+      }
+
+      if(pseudo.length === 0){
+        span.appendChild(textNode);
+        pseudo_input.after(span);
+        event.preventDefault();
+      }
+      else if(email.length === 0){
+        span.appendChild(textNode);
+        email_input.after(span);
+        event.preventDefault();
+      }
+      else if(password.length === 0){
+        span.appendChild(textNode);
+        password_input.after(span);
+        event.preventDefault();
+      }
+      else{
+        
+      }
+    }
+  }
+</script>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto sm:px-6 lg:px-8 h-screen flex flex-col justify-center items-center">
+
+      <!-- Logo located  above the form-->
+
+    <div class="w-full sm:w-auto">
+      <a href="./accueil">
+        <img class="mx-auto mb-4 sm:max-w-xs md:max-w-none md:mb-0 hover:cursor-pointer hover:brightness-90 w-36" src="./assets/chicken.png" alt="twitter logo">
+      </a>    
+    </div>
+
+    <div class="w-full max-w-sm">
+
+      <!-- h1 Cuiiter-->
+
+      <h1 class="text-center text-xl font-bold mb-4">Inscris-toi à Cuiitter.</h1>
+
+      <!-- Sub form -->
+
+      <form id="subForm" method="POST" action="./connexion" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+
+          <!-- Pseudo -->
+
+          <label class="block text-gray-700 font-bold mb-2" for="username">
+            Pseudonyme
+          </label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="pseudo" name="nickname" type="text" placeholder="Entrez un pseudo">
+        </div>
+
+          <!-- Mail adress  -->
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="email">
+            Adresse mail
+          </label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" placeholder="Entrez une adresse mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+        </div>
+
+          <!-- Password -->
+
+        <div class="mb-6">
+          <label class="block text-gray-700 font-bold mb-2" for="password">
+            Mot de passe
+          </label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" name="password" placeholder="********">
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 font-bold mb-2" for="img">
+            Image de profil
+          </label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="url" name="img" placeholder="Insérez l'url de votre imagegit br">
+        </div>
+          <!-- Submit "subscribe" button -->
+
+        <div class="mb-6 flex flex-col sm:flex-row justify-between">
+          <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0" id="subscribe" name="subscribe" type="submit">
+            S'inscrire
+          </button>
+      
+
+          <!-- Back to the connexion in case the user already have an account -->
+          
+          <a href="./connexion" class=" flex justify-center hover:green-600 text-green-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Retour
+          </a>
+        </div>
+        
+      </form>
+      
+      <p class="text-center text-gray-500 text-xs">
+        &copy;2023 Cuiitter. Tous droits réservés.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

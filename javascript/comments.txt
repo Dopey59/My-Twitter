@@ -1,0 +1,11 @@
+Pour réaliser l'espace commentaire : 
+
+Quand je clique sur l'icone "commentaire" -> j'affiche en background position la page d'accueil ---> j'affiche une mini div au centre de la page
+qui prend le dessus avec le z-index pour le positionner au dessus de l'arrière plan. 
+
+Schéma : 
+
+* Je clique sur l'icone commentaire 
+* Je redirige vers la page d'accueil que je mets en arrière plan avec z-index
+* j'affiche ma div commentaire que j'ai créée
+* La div commentaire se positionne au dessus de la page d'accueil
